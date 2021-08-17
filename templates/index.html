@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Home
+{% endblock title %}
+
+{% block content %}
+
+<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		{% include 'aside.html' %}
+		 <!-- END COLORLIB-ASIDE -->
+
+
+
+			<div id="colorlib-main">
+				<section class="ftco-section ftco-no-pt ftco-no-pb">
+					<div class="container px-md-0">
+						<div class="row d-flex no-gutters">
+							{% for project in projects %}
+							<div class="col-md-12 portfolio-wrap">
+								<div class="row no-gutters align-items-center">
+									<a href="images/work-1.jpg" class="col-md-6 img image-popup js-fullheight d-flex align-items-center justify-content-center" style="background-image: url({{ project.image.url }});">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-expand"></span>
+										</div>
+									</a>
+									<div class="col-md-6">
+										<div class="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+											<div class="px-4 px-lg-4">
+												<div class="desc">
+													<div class="top">
+														<span class="subheading">{{ project.project_tag }}</span>
+														<h2 class="mb-4"><a href="gallery.html">{{ project.project_name}}</a></h2>
+													</div>
+													<div class="absolute">
+														<p>{{project.project_desc }}</p>
+													</div>
+													<p><a href="{{project.project_url}}" class="custom-btn">View Portfolio</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+
+							
+						</div>
+						<div class="row d-flex">
+							<div class="col-md-12">
+								<a class="btn-custom-load d-block w-100 text-center py-4" href="https://training.zuri.team/">
+									<div style=" width 40px; padding: 5px;">
+										<img style="width: 120px; background: #fff; padding: 7px;" src="{% static 'zuri.png' %}" />
+									</div>
+								</a>
+								<a class="btn-custom-load d-block w-100 text-center py-4" href="https://hng.tech/">
+								<div style=" width 40px; padding: 5px;">
+									<img style="width: 120px; background: #fff; padding: 7px;" src="{% static 'hng.png' %}" />
+								</div>
+								</a>
+								<a class="btn-custom-load d-block w-100 text-center py-4" href="https://ingressive.org/">
+									<img  style="width: 120px; background: #fff; padding: 7px;margin-top:" src="{% static 'I4G.png' %}" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div><!-- END COLORLIB-MAIN -->
+		</div><!-- END COLORLIB-PAGE -->
+
+
+{% endblock content %}
+
+
+

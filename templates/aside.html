@@ -1,0 +1,60 @@
+{% load static %}
+<aside id="colorlib-aside" role="complementary" class="js-fullheight" style="height: 100vh;">
+
+			<h3 id="colorlib-logo" class="mb-4 mb-md-5"><a href="{% url 'index' %}" style="background-image: url({% static 'images/bg_1.jpg'%});">Devjoseph</a></h3>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li 
+                        {% if '/' == request.path %}
+                            class="colorlib-active"
+                        
+                        {% endif %}
+                            ><a href="{% url  'index' %}">Home
+                            </a>
+                            
+                        
+
+                        
+                    </li>
+					
+					<li {% if 'about' == request.path %}
+                            class="colorlib-active"
+                        
+                        {% endif %}
+                    ><a href="{% url 'about' %}">About</a></li>
+					<li><a href="https://josephchinedu.hashnode.dev/">Blog</a></li>
+					<li {% if 'contact' == request.path %}
+                            class="colorlib-active"
+                        
+                        {% endif %}
+                    ><a href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div >
+               
+				<div class="mb-4">
+                <br />
+					<h6 style="color: #fff;">Intern @: </h6>
+                        <a href="https://training.zuri.team/">
+                            <div style=" width 40px; padding: 5px;">
+                                <img style="width: 120px; background: #fff; padding: 7px;" src="{% static 'zuri.png' %}" />
+                            </div>
+                        </a>
+                        <br />
+                        <a href="https://hng.tech/">
+                           <div style=" width 40px; padding: 5px;">
+                             <img style="width: 120px; background: #fff; padding: 7px;" src="{% static 'hng.png' %}" />
+                           </div>
+                        </a><br />
+                        <a href="https://ingressive.org/">
+                            <img style="width: 120px; background: #fff; padding: 7px;margin-top:" src="{% static 'I4G.png' %}" />
+                        </a>
+                        <br /><br />
+                        <a href="https://ingressive.org/" style="visibility: hidden;">
+                            <img style="width: 120px; background: #fff; padding: 7px;margin-top:" src="{% static 'I4G.png' %}" />
+                        </a>
+					
+				</div>
+				
+			</aside>

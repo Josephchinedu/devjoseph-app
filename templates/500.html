@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  500 server error
+{% endblock title %}
+
+{% block content %}
+    <div class="row no-gutters align-items-center">
+        <div class="col-md-6 offset-md-3">
+            <div class="text pt-5 pl-0 px-lg-5 pl-md-4 ftco-animate">
+                <div class="px-4 px-lg-4" style="margin-top: 20vh;">
+                    <div class="desc">
+                        <div class="top">
+                            
+                            <h2 class="mb-4"><a href="gallery.html">500 server error </a></h2>
+                        </div>
+                        <div class="absolute">
+                            <p>👮‍♂️👮‍♂️👮‍♂️👮‍♂️👮‍♂️</p>
+                        </div>
+                        <p><a href="{% url  'index' %}" class="btn btn-outline-warning">Back to homepage</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+{% endblock content %}

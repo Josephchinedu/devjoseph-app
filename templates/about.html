@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  About
+{% endblock title %}
+
+{% block content %}
+<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		{% include 'aside.html' %}
+			<div id="colorlib-main">
+
+				<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+					<div class="container-fluid px-0">
+						<div class="row d-flex">
+							{% for i in photo %}
+							<div class="col-md-6 d-flex">
+								<div class="img d-flex align-self-stretch align-items-center js-fullheight" style="background-image:url('{{ i.image.url }}');">
+								</div>
+								
+							</div>
+							{% endfor %}
+							<div class="col-md-6 d-flex align-items-center">
+								<div class="text px-4 pt-5 pt-md-0 px-md-4 pr-md-5 ftco-animate">
+									<h2 class="mb-4">Hello! I'm<span>Joseph Chinedu</span> Python Backend Developer</h2>
+									<p>I am a Python Developer and Django expert in building real-time and a static web app, rest APIs, Django App, Flask App and Data miner, web scrapper.
+									<br />
+									Python2x/3x, Django, Flask, Pandas, Numpy, SQLalchemy, Requests, BeautifulSoup, Urllib
+									<br />
+									working with Bootstrap + all versions of HTML/CSS/JS<br />
+
+									I am creating DJANGO websites and portals.<br />
+
+									Designing complex databases Redis,PostgreSQL/Mongo DB/SQL Server/SQLite/MY SQL
+										<br />
+									<br />
+
+									infrastructure: Docker, Google Cloud, AWS, Vagrant, Celery, Git,<br />
+
+									</p>
+									<div class="team-wrap row mt-4">
+										<div class="col-md-4 team">
+											<a href="https://github.com/Josephchinedu">
+											<div class="img" style="background-image: url({% static 'download.png' %});"></div>
+											</a>
+											
+										</div>
+										<div class="col-md-4 team">
+											<a href ="https://www.linkedin.com/in/joseph-chinedu-ba9a19170/" ><div class="img" style="background-image: url({% static  'inde.png' %});"></div>
+											</a>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div><!-- END COLORLIB-MAIN -->
+		</div><!--
+
+{% endblock content %}
