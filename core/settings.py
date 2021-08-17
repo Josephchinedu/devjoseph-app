@@ -147,9 +147,9 @@ SENDGRID_API_KEY = config('SENDGRID_API_KEY')
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 cloudinary.config( 
-  cloud_name = "darjsxr6v", 
-  api_key = "921788776942684", 
-  api_secret = "sW13ltO0tTlTgpVYRJsnL40ZrwM" 
+  cloud_name = "", 
+  api_key = "", 
+  api_secret = "" 
 )
 
 django_heroku.settings(locals())
