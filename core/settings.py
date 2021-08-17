@@ -16,6 +16,7 @@ from decouple import config
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -150,3 +151,5 @@ cloudinary.config(
   api_key = "921788776942684", 
   api_secret = "sW13ltO0tTlTgpVYRJsnL40ZrwM" 
 )
+
+django_heroku.settings(locals())
